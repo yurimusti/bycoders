@@ -1,13 +1,14 @@
 import styled from "styled-components";
-import { background, flexbox, layout, typography } from "styled-system";
+import { background, flexbox, layout, position, space, typography } from "styled-system";
 
 export const Main = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 150px;
   position: fixed;
   width: 100%;
+  ${space}
+  ${position}
 `;
 
 export const SocialContainer = styled.div`

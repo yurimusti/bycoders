@@ -11,6 +11,7 @@ import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
 import Loading from "../../components/Loading";
+import Column from "antd/lib/table/Column";
 
 const Leads = () => {
   const router = useRouter();
@@ -23,28 +24,38 @@ const Leads = () => {
   if (type === "success") {
     return(
       <Styled.MainBanner>
-      <Styled.TextsContainer>
-          <Styled.Title>
+      <Styled.TextsContainer
+        px={[30, 50, 150]}
+        mt={[150, 150, 150]}
+        textAlign={['center', 'inherit', 'inherit']}
+      >
+          <Styled.Title
+            textAlign={['center', 'inherit', 'inherit']}
+            fontSize={[50, 50, 50, 86]}
+            mt={[30, 0, 0]}
+          >
             <Zoom> Sucesso!</Zoom>
           </Styled.Title>
-        <Styled.SubTitleSuccess>  
+        <Styled.SubTitleSuccess 
+        fontSize={[30, 50, 50, 46]}
+        >  
           <Zoom delay={100}>Obrigado por fazer parte do Socialli!</Zoom>  
         </Styled.SubTitleSuccess> 
-        <Styled.DescriptionSuccess>
+        <Styled.DescriptionSuccess fontSize={[15, 20, 20]}>
           <Zoom delay={200} >
             Estamos em fase de construção mas quando tiver pronto,
             enviaremos pra você um email incrível para começar a curtir suas festas. 
           </Zoom>
         </Styled.DescriptionSuccess>
 
-        <Styled.DescriptionSuccess>
+        <Styled.DescriptionSuccess fontSize={[15, 20, 20]}>
           <Zoom delay={300}>
           Fique atento(a) pois você faz parte das primeiras pessoas que foram cadastradas.
            Enviaremos também um presente quando tudo estiver pronto ;)
           </Zoom>
         </Styled.DescriptionSuccess>
 
-        <Styled.Description>
+        <Styled.Description fontSize={[15, 20, 20]}>
           <Zoom delay={400}>
             - Equipe Socialli.
           </Zoom>
@@ -55,16 +66,23 @@ const Leads = () => {
   } else {
     return (
       <Styled.MainBanner>
-        <Styled.TextsContainer>
+        <Styled.TextsContainer 
+        px={[30, 50, 150]}
+        mt={[150, 150, 150]}
+        textAlign={['center', 'inherit', 'inherit']}
+        >
           <Fade left>
-            <Styled.Title>Que tal uma </Styled.Title>
-            <Styled.ContainerSubTitle>
-              <Styled.SubTitle>festa online hoje</Styled.SubTitle>
-              <Interrogation />
-            </Styled.ContainerSubTitle>
+            <Styled.Title 
+            textAlign={['center', 'inherit', 'inherit']}
+            fontSize={[30, 50, 50, 86]}
+            mt={[30, 0, 0]}
+            >
+              Que tal uma 
+            </Styled.Title>
+            <Styled.SubTitle fontSize={[30, 50, 50, 86]}>festa online hoje</Styled.SubTitle>
           </Fade>
           
-            <Styled.Description>
+            <Styled.Description fontSize={[15, 20, 20]}>
               <Fade left delay={100}>
                 Já pensou que pode ser incrível ficar na sua casa e 
                 poder aproveitar uma festa ou um superevento e, de quebra, conhecer 
@@ -72,42 +90,56 @@ const Leads = () => {
               </Fade>
             </Styled.Description>
   
-          <Styled.RegisterDescription>
+          <Styled.RegisterDescription fontSize={[15, 20, 20]}>
             <Fade left delay={200}>
               Cadastre seu e-mail e conheça o Socialli!
             </Fade>
           </Styled.RegisterDescription>
   
-          <Styled.Form>
+          <Styled.Form flexDirection={['column', 'row', 'row']}>
             <Fade bottom delay={400}>
               <Styled.FormInput
+                mt={[15, 0, 0]}
                 width={[280, 327, 405]}
+                fontSize={[13, 16, 16]}
                 height={[40, 40, 45]}
                 placeholder="Seu email aqui"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 />
             </Fade>
-            <Fade bottom delay={550}>
-              <Styled.RegisterBtn 
-              fontSize={[14, 16, 16]}
-              onClick={() => setType("success")}
-              >
-                CADASTRAR!
-              </Styled.RegisterBtn>
-            </Fade>
+
+            <Styled.ButtonContainer mt={[30, 0, 0]}>
+              <Fade bottom delay={550}>
+                <Styled.RegisterBtn 
+                px={[140, 20, 20]}
+                ml={[0, 10, 10]}
+                fontSize={[14, 16, 16]}
+                onClick={() => setType("success")}
+                >
+                  CADASTRAR!
+                </Styled.RegisterBtn>
+              </Fade>
+            </Styled.ButtonContainer>
           </Styled.Form>
   
-          <Styled.StoreContainer>
+          <Styled.StoreContainer 
+          alignSelf={['center', 'inherit', 'inherit']}
+          mt={[50, 50, 100]}
+          >
   
             <Styled.StoreTitle> <Fade delay={500}> EM BREVE: </Fade> </Styled.StoreTitle>
             
             <Styled.IosContainer>
-              <Ios />
+              <Fade top delay={300}>
+                <Ios />
+              </Fade>
             </Styled.IosContainer>
             
             <Styled.StoreImgContainer>
-              <Store />
+              <Fade top delay={400}>
+                <Store />
+              </Fade>
             </Styled.StoreImgContainer>  
   
           </Styled.StoreContainer>

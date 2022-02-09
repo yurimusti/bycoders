@@ -9,4 +9,18 @@ export const Container = styled.div`
   background-position: center;
   ${background}
   ${layout}
+
+  @media (max-width: 1300px) {
+    height: 100vh;
+  }
+
+  @media (max-width: 900px) {
+    height: 114vh;
+    width: 110vh;
+  } 
+
+  @media (max-width: 830px) {
+    height: 100%;
+    width: 100%;
+  } 
 `;

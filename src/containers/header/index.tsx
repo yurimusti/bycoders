@@ -21,7 +21,11 @@ const Header = () => {
   const [senha, setSenha] = useState("");
 
   return (
-    <Styled.Main>
+    <Styled.Main 
+    px={[30, 50, 150]}
+    pt={[40, 40, 60]}
+    position={['absolute', 'fixed', 'fixed']}
+    >
 
       <LightSpeed>
         <Styled.LogoContainer>

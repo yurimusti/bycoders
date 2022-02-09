@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { background, flexbox, layout, typography } from "styled-system";
+import { background, flexbox, layout, space, typography } from "styled-system";
 
 export const MainBanner = styled.div`
   display: flex;
@@ -16,8 +16,8 @@ export const TextsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 0px 150px;
-  margin-top: 150px;
+  ${space}
+  ${typography}
 `
 
 export const Title = styled.span`
@@ -26,11 +26,15 @@ export const Title = styled.span`
   font-weight: bold;
   max-width: 850px;
   font-size: 84px;
+  ${typography}
+  ${space}
 `;
 
 export const ContainerSubTitle = styled.div`
   display: flex;
   align-items: center;
+  text-align: center;
+  ${typography}
 `
 
 export const SubTitle = styled.span`
@@ -40,6 +44,13 @@ export const SubTitle = styled.span`
   max-width: 850px;
   font-size: 88px;
   line-height: 90px;
+  text-align: center;
+  ${typography}
+  
+  @media (max-width: 762px) {
+    line-height: 50px;
+    margin-top: 15px;
+  }
 `;
 
 export const SubTitleSuccess = styled.span`
@@ -50,6 +61,12 @@ export const SubTitleSuccess = styled.span`
   font-size: 40px;
   line-height: 90px;
   padding-bottom: 40px;
+  ${typography}
+
+  @media (max-width: 762px) {
+    line-height: 50px;
+    margin-top: 15px;
+  }
 `;
 
 export const Description = styled.span`
@@ -60,6 +77,7 @@ export const Description = styled.span`
   line-height: 30px;
   max-width: 630px;
   padding: 40px 0px;
+  ${typography}
 `;
 
 export const DescriptionSuccess = styled.span`
@@ -70,6 +88,7 @@ export const DescriptionSuccess = styled.span`
   line-height: 30px;
   max-width: 630px;
   padding: 20px 0px;
+  ${typography}
 `;
 
 export const RegisterDescription = styled.span`
@@ -80,16 +99,15 @@ export const RegisterDescription = styled.span`
   line-height: 24px;
   max-width: 800px;
   padding-bottom: 20px;
+  ${typography}
 `;
 
 export const Form = styled.div`
   display: flex;
   align-items: center;
-
-  .rippleEffect > button {
-    border-radius: 30px;
-    background: linear-gradient(90deg, #016dc8, #55e7fc)
-  }
+  ${typography}
+  ${space}
+  ${flexbox}
 `
 
 export const FormInput = styled.input`
@@ -107,10 +125,12 @@ export const FormInput = styled.input`
   -o-transition: box-shadow 0.5s ease;
   -ms-transition: box-shadow 0.5s ease;
   transition: box-shadow 0.5s ease;
+  ${space}
   ${layout}
+  ${typography}
 
   ::placeholder {
-    color: #fff;
+    color: #ffffff90;
     font-weight: bold;
   }
 
@@ -120,6 +140,10 @@ export const FormInput = styled.input`
     outline: none; 
   }
 `;
+
+export const ButtonContainer = styled.div`
+  ${space}
+`
 
 export const RegisterBtn = styled.a`
   display: flex;
@@ -141,6 +165,7 @@ export const RegisterBtn = styled.a`
   transition: 0.3s;
   ${typography}
   ${flexbox}
+  ${space}
 
     :hover {
     transform: scale(1.02);
@@ -153,8 +178,10 @@ export const RegisterBtn = styled.a`
 export const StoreContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 130px;
+  margin-top: 100px;
   gap: 5px;
+  ${space}
+  ${flexbox}
 `;
 
 export const StoreTitle = styled.span`
@@ -163,6 +190,7 @@ export const StoreTitle = styled.span`
   font-family: Poppins;
   font-weight: bold;
   padding-right: 5px;
+  ${typography}
 `
 
 export const IosContainer = styled.a`
