@@ -54,14 +54,43 @@ export const SubTitleSuccess = styled.span`
   font-weight: bold;
   max-width: 850px;
   font-size: 40px;
-  line-height: 90px;
+  line-height: 70px;
   padding-bottom: 40px;
+  max-width: 800px;
   ${typography}
+
+  @media (max-width: 1300px) {
+    font-size: 40px;
+    line-height: 70px;
+    max-width: 600px;
+  }
+
+  @media (max-width: 1170px) {
+    font-size: 35px;
+    max-width: 450px;
+    line-height: 50px
+  }
+
+  @media (max-width: 940px) {
+    font-size: 35px;
+    max-width: 400px;
+    line-height: 50px
+  }
+
+  @media (max-width: 831px) {
+    max-width: 600px;
+  }
 
   @media (max-width: 762px) {
     line-height: 50px;
     margin-top: 15px;
+    font-size: 30px;
   }
+
+  @media (max-width: 472px) {
+    font-size: 24px;
+  }
+
 `;
 
 export const Description = styled.span`
@@ -95,6 +124,22 @@ export const DescriptionSuccess = styled.span`
   max-width: 630px;
   padding: 20px 0px;
   ${typography}
+
+  @media (max-width: 1300px) {
+    max-width: 520px
+  }
+
+  @media (max-width: 1170px) {
+    max-width: 460px;
+  }
+
+  @media (max-width: 940px) {
+    max-width: 420px;
+  }
+
+  @media (max-width: 831px) {
+    max-width: 600px;
+  }
 `;
 
 export const RegisterDescription = styled.span`
