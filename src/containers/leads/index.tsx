@@ -1,6 +1,6 @@
 import * as Styled from "./styles";
 
-import Interrogation from "../../assets/interrogation.svg";
+import Interrogation from "../../assets/int.svg";
 import Ios from "../../assets/ios.svg";
 import Store from "../../assets/store.svg";
 
@@ -10,8 +10,9 @@ import { useEffect, useState } from "react";
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
+import SubTitle from "../../components/subtitle"
+import Description from "../../components/description"
 import Loading from "../../components/Loading";
-import Column from "antd/lib/table/Column";
 
 const Leads = () => {
   const router = useRouter();
@@ -65,7 +66,7 @@ const Leads = () => {
     )
   } else {
     return (
-      <Styled.MainBanner>
+      <Styled.MainBanner justifyContent={['center', 'flex-start', 'flex-start']}>
         <Styled.TextsContainer 
         px={[30, 50, 150]}
         mt={[150, 150, 150]}
@@ -79,14 +80,16 @@ const Leads = () => {
             >
               Que tal uma 
             </Styled.Title>
-            <Styled.SubTitle fontSize={[30, 50, 50, 86]}>festa online hoje</Styled.SubTitle>
+            <SubTitle />
           </Fade>
-          
+
             <Styled.Description fontSize={[15, 20, 20]}>
               <Fade left delay={100}>
                 Já pensou que pode ser incrível ficar na sua casa e 
-                poder aproveitar uma festa ou um superevento e, de quebra, conhecer 
-                pessoas com gostos parecidos com o seu. <br /> Este é o Socialli!
+                poder aproveitar uma festa ou um superevento e, de quebra,
+                <Description /> 
+                <br />
+                Este é o Socialli!
               </Fade>
             </Styled.Description>
   
@@ -122,10 +125,11 @@ const Leads = () => {
               </Fade>
             </Styled.ButtonContainer>
           </Styled.Form>
+          
   
           <Styled.StoreContainer 
           alignSelf={['center', 'inherit', 'inherit']}
-          mt={[50, 50, 100]}
+          mt={[50, 50, 60]}
           >
   
             <Styled.StoreTitle> <Fade delay={500}> EM BREVE: </Fade> </Styled.StoreTitle>

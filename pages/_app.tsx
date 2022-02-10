@@ -21,7 +21,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
       <ApolloProvider client={client}>
-      <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
         <Component {...pageProps} />
         <GlobalStyle />
       </ApolloProvider>

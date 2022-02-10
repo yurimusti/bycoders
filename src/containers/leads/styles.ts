@@ -6,7 +6,7 @@ export const MainBanner = styled.div`
   align-items: center;
   height: 100%;
   ${layout}
-  
+  ${flexbox}
 `;
 
 export const NavBar = styled.div`
@@ -18,6 +18,12 @@ export const TextsContainer = styled.div`
   justify-content: flex-start;
   ${space}
   ${typography}
+
+  .react-reveal {
+    @media (max-width: 472px) {
+      text-align: center;
+    }
+  }
 `
 
 export const Title = styled.span`
@@ -28,28 +34,17 @@ export const Title = styled.span`
   font-size: 84px;
   ${typography}
   ${space}
-`;
 
-export const ContainerSubTitle = styled.div`
-  display: flex;
-  align-items: center;
-  text-align: center;
-  ${typography}
-`
+  @media (max-width: 1600px) {
+    font-size: 60px;
+  }
 
-export const SubTitle = styled.span`
-  color: #fff;
-  font-family: Poppins;
-  font-weight: bold;
-  max-width: 850px;
-  font-size: 88px;
-  line-height: 90px;
-  text-align: center;
-  ${typography}
-  
-  @media (max-width: 762px) {
-    line-height: 50px;
-    margin-top: 15px;
+  @media (max-width: 1170px) {
+    font-size: 45px;
+  }
+
+  @media (max-width: 472px) {
+    font-size: 30px;
   }
 `;
 
@@ -78,6 +73,17 @@ export const Description = styled.span`
   max-width: 630px;
   padding: 40px 0px;
   ${typography}
+
+  @media (max-width: 1170px) {
+    max-width: 400px;
+  }
+
+  @media (max-width: 638px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 export const DescriptionSuccess = styled.span`
@@ -108,6 +114,18 @@ export const Form = styled.div`
   ${typography}
   ${space}
   ${flexbox}
+
+  @media (max-width: 1170px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 831px) {
+    flex-direction: row;
+  }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 `
 
 export const FormInput = styled.input`
@@ -143,6 +161,14 @@ export const FormInput = styled.input`
 
 export const ButtonContainer = styled.div`
   ${space}
+
+  @media (max-width: 1170px) {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 831px) {
+    margin-top: 30px;
+  }
 `
 
 export const RegisterBtn = styled.a`
@@ -213,4 +239,9 @@ export const StoreImgContainer = styled.a`
     transform: scale(1.2);
     transform: translateY(-5px);
   }
+  
 `
+export const IntImgContainer = styled.div`
+
+`
+

@@ -28,6 +28,7 @@ const Home: React.FC = () => {
           `url(${background})`,
         ]}
         backgroundPosition={['inherit', 'inherit', 'center']}
+        height={['130vh', '100vh', '100vh']}
       >
         <Header />
         <Leads />

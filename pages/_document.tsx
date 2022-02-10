@@ -44,53 +44,25 @@ export default class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta
-          name="facebook-domain-verification"
-          content="myb383m82vuiikw6zensy2pbtfn2sq"
-        />
-        <meta name="description" content="Socialli :: App" />
+            name="facebook-domain-verification"
+            content="myb383m82vuiikw6zensy2pbtfn2sq"
+          />
+          <meta name="description" content="Socialli :: App" />
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
             rel="stylesheet"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap"
+            rel="stylesheet"
           />
-          <link
-           href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700&display=swap" 
-           rel="stylesheet"
-          ></link>
-
-<link
-          rel="preload"
-          href="/fonts/Gilroy-Regular.ttf"
-          as="font"
-          crossOrigin=""
-        />
-        <link
-          rel="preload"
-          href="/fonts/Gilroy-Medium.ttf"
-          as="font"
-          crossOrigin=""
-        />
-         <link
-          rel="preload"
-          href="/fonts/Gilroy-Light.ttf"
-          as="font"
-          crossOrigin=""
-        />
-         <link
-          rel="preload"
-          href="/fonts/Gilroy-Bold.ttf"
-          as="font"
-          crossOrigin=""
-        />
 
           <link rel="icon" href="favicon.ico" />
           <script
-          dangerouslySetInnerHTML={{
-            __html: ` !(function (f, b, e, v, n, t, s) {
+            dangerouslySetInnerHTML={{
+              __html: ` !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
           n.callMethod
@@ -115,8 +87,8 @@ export default class MyDocument extends Document {
       );
       fbq("init", "842124629763992");
       fbq("track", "PageView");`,
-          }}
-        />
+            }}
+          />
         </Head>
         <body>
           <Main />

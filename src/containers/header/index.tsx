@@ -37,17 +37,32 @@ const Header = () => {
         
       <Jump>
         <Styled.SocialContainer>
-          <Facebook />
+          <Facebook 
+            onClick={() => {
+              const url = "https://www.facebook.com/socialliapp";
+              window.open(url, "_blank");
+            }}
+          />
         </Styled.SocialContainer>
       </Jump>
       <Jump delay={100}>
         <Styled.SocialContainer>
-          <Twitter />
+          <Twitter 
+            onClick={() => {
+              const url = "https://twitter.com/socialliapp";
+              window.open(url, "_blank");
+            }}
+          />
         </Styled.SocialContainer>
       </Jump>
       <Jump delay={200}>
         <Styled.SocialContainer>
-          <Instagram />
+          <Instagram 
+            onClick={() => {
+              const url = "https://www.instagram.com/socialliapp/";
+              window.open(url, "_blank");
+            }}
+          />
         </Styled.SocialContainer>
       </Jump>
 
