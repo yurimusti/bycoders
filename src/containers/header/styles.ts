@@ -10,10 +10,6 @@ export const Main = styled.div`
   ${space}
   ${position}
 
-  @media (max-height: 750px) {
-    background-color: #6526be;
-    z-index: 5;  
-  }
 `;
 
 export const SocialContainer = styled.div`

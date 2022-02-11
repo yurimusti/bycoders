@@ -14,4 +14,8 @@ export const Container = styled.div`
     height: 100vh;
   }
 
+  @media (max-height: 680px) {
+    height: 110vh;
+  }
+
 `;
