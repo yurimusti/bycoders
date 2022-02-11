@@ -10,6 +10,10 @@ export const Container = styled.div`
   ${background}
   ${layout}
 
+  @media (max-height: 900px) {
+    height: 110vh;
+  }
+
   @media (max-height: 600px) {
     height: 150vh;
   }

@@ -16,6 +16,11 @@ export const Description = styled.span`
   @media (max-width: 1170px) {
     max-width: 360px;
   }
+
+  @media (max-height: 850px) {
+    font-size: 14px;
+    line-height: 25px;
+  }
   
 `;
 

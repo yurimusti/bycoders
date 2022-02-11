@@ -32,6 +32,7 @@ export const Title = styled.span`
   font-weight: bold;
   max-width: 850px;
   font-size: 84px;
+  text-shadow: 0px 4px 37px rgba(255, 255, 255, 0.25);
   ${typography}
   ${space}
 
@@ -113,6 +114,10 @@ export const Description = styled.span`
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-height: 850px) {
+    font-size: 16px;
+  }
 `;
 
 export const DescriptionSuccess = styled.span`
@@ -151,6 +156,10 @@ export const RegisterDescription = styled.span`
   max-width: 800px;
   padding-bottom: 20px;
   ${typography}
+
+  @media (max-height: 850px) {
+    font-size: 16px;
+  }
 `;
 
 export const Form = styled.div`

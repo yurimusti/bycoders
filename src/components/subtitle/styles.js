@@ -19,6 +19,7 @@ export const SubTitle = styled.span`
   font-size: 88px;
   line-height: 90px;
   text-align: center;
+  text-shadow: 0px 4px 37px rgba(255, 255, 255, 0.25);
   ${typography}
 
   @media (max-width: 1600px) {
