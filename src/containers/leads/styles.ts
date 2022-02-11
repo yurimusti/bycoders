@@ -122,7 +122,7 @@ export const Description = styled.span`
   @media (max-height: 850px) {
     font-size: 14px;
     padding: 15px 0px;
-    max-width: 420px;
+    max-width: 430px;
   }
   
 `;
@@ -222,6 +222,7 @@ export const FormInput = styled.input`
   @media (max-height: 800px) {
     font-size: 12px;
     height: 38px;
+    width: 300px;
   }
 `;
 
