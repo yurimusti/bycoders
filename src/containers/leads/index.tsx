@@ -61,7 +61,7 @@ const Leads = () => {
     if (email === "") {
       notification.warning({
         message: "Alerta",
-        description: "É necessário fornecer um e-mail antes de continuar.",
+        description: "É necessário fornecer um Email antes de continuar.",
       });
     } else {
       createLandingpage({

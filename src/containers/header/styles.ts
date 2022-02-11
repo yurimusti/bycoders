@@ -10,6 +10,12 @@ export const Main = styled.div`
   ${space}
   ${position}
 
+  @media (max-height: 600px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #5d2cbc;
+    z-index: 5;  
+  }
 `;
 
 export const SocialContainer = styled.div`
