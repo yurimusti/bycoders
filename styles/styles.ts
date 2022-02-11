@@ -11,7 +11,7 @@ export const Container = styled.div`
   ${layout}
 
   @media (max-height: 900px) {
-    height: 10vh;
+    height: 110vh;
   }
 
   @media (max-height: 600px) {
