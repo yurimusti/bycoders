@@ -15,15 +15,15 @@ const Home: React.FC = () => {
         <meta name="description" content="Socialli :: App" />
         <title>Socialli - App</title>
       </Head>
-    
+
       <Styled.Container
         backgroundImage={[
           `url(${background})`,
           `url(${background})`,
           `url(${background})`,
         ]}
-        backgroundPosition={['inherit', 'inherit', 'center']}
-        height={['130vh', '100vh', '100vh']}
+        backgroundPosition={["inherit", "inherit", "center"]}
+        height={["130vh", "100vh", "100vh"]}
       >
         <Header />
         <Leads />
