@@ -212,11 +212,15 @@ export const ButtonContainer = styled.div`
   }
 
   @media (max-width: 831px) {
+    margin-top: 0px;
+  }
+
+  @media (max-width: 638px) {
     margin-top: 30px;
   }
 `
 
-export const RegisterBtn = styled.a`
+export const RegisterBtn = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,6 +233,7 @@ export const RegisterBtn = styled.a`
   color: #fff;
   font-size: 24px;
   font-weight: bold;
+  border-width: 0px;
   box-shadow: 0px 2px 6px rgba(79, 0, 150, 0.25), inset 0px -4px 0px #C6006F;
   border-radius: 8px;
   transition: 0.3s;

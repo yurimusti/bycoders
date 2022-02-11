@@ -9,4 +9,8 @@ export const Container = styled.div`
   background-position: center;
   ${background}
   ${layout}
+
+  @media (max-height: 600px) {
+    height: 150vh;
+  }
 `;

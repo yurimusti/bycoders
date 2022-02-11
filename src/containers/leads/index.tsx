@@ -1,6 +1,8 @@
+import { gql, useMutation } from "@apollo/client";
+import { notification } from "antd";
+
 import * as Styled from "./styles";
 
-import Interrogation from "../../assets/int.svg";
 import Ios from "../../assets/ios.svg";
 import Store from "../../assets/store.svg";
 
@@ -14,15 +16,70 @@ import SubTitle from "../../components/subtitle"
 import Description from "../../components/description"
 import Loading from "../../components/Loading";
 
+const CREATE_LEAD = gql`
+  mutation Mutation($input: LandingpageInput) {
+    createLandingpage(input: $input) {
+      status {
+        message
+        status
+      }
+      data {
+        email
+        type
+      }
+    }
+  }
+`;
+
 const Leads = () => {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("");
   const [type, setType] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  console.log(type);
+  const [createLandingpage, { data, loading: loadingError, error }] = useMutation(CREATE_LEAD);
 
-  if (type === "success") {
+  useEffect(() => {
+    if (data?.createLandingpage) {
+      if (data.createLandingpage.status.status === 200) {
+        notification.success({
+          message: "Sucesso",
+          description: "Email cadastrado com sucesso.",
+        });
+
+        setStatus("success")
+      } else {
+        notification.error({
+          message: "Error",
+          description: data.createLandingpage.status.message,
+        });
+      }
+    }
+  }, [data]);
+
+  const _handleCreate = () => {
+    if (email === "") {
+      notification.warning({
+        message: "Alerta",
+        description: "É necessário fornecer um e-mail antes de continuar.",
+      });
+    } else {
+      createLandingpage({ 
+        variables: { 
+          input: { 
+            email,
+            type: "app" 
+          } 
+        } 
+      });
+    }
+  };
+  
+  console.log(error)
+
+  if (status === "success") {
     return(
       <Styled.MainBanner>
       <Styled.TextsContainer
@@ -107,6 +164,7 @@ const Leads = () => {
                 fontSize={[13, 16, 16]}
                 height={[40, 40, 45]}
                 placeholder="Seu email aqui"
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 />
@@ -118,7 +176,7 @@ const Leads = () => {
                 px={[140, 20, 20]}
                 ml={[0, 10, 10]}
                 fontSize={[14, 16, 16]}
-                onClick={() => setType("success")}
+                onClick={() => _handleCreate()}
                 >
                   CADASTRAR!
                 </Styled.RegisterBtn>
@@ -154,3 +212,5 @@ const Leads = () => {
 };
 
 export default Leads;
+
+
