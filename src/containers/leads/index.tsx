@@ -39,7 +39,7 @@ const Leads = () => {
   const [type, setType] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const [createLandingpage, { data, loading: loadingError, error }] = useMutation(CREATE_LEAD);
+  const [createLandingpage, { data, loading: loadingCreate, error }] = useMutation(CREATE_LEAD);
 
   useEffect(() => {
     if (data?.createLandingpage) {
@@ -76,8 +76,6 @@ const Leads = () => {
       });
     }
   };
-  
-  console.log(error)
 
   if (status === "success") {
     return(

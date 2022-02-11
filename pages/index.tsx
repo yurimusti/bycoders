@@ -12,11 +12,6 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-      
-        <meta
-          name="facebook-domain-verification"
-          content="myb383m82vuiikw6zensy2pbtfn2sq"
-        />
         <meta name="description" content="Socialli :: App" />
         <title>Socialli - App</title>
       </Head>
