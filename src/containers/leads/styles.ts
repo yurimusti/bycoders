@@ -120,8 +120,9 @@ export const Description = styled.span`
   }
 
   @media (max-height: 850px) {
-    font-size: 16px;
-    padding: 25px 0px;
+    font-size: 14px;
+    padding: 15px 0px;
+    max-width: 420px;
   }
   
 `;
@@ -283,6 +284,10 @@ export const StoreContainer = styled.div`
   gap: 5px;
   ${space}
   ${flexbox}
+
+  @media (max-height: 800px) {
+    margin-top: 30px;
+  }
 `;
 
 export const StoreTitle = styled.span`
