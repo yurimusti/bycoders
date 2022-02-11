@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <Styled.Main 
     px={[30, 50, 150]}
-    py={[40, 40, 40]}
+    py={[30, 30, 30]}
     position={['absolute', 'fixed', 'fixed']}
     >
 

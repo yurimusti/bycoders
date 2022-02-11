@@ -11,10 +11,14 @@ export const Container = styled.div`
   ${layout}
 
   @media (max-height: 900px) {
-    height: 120vh;
+    height: 100vh;
+  }
+
+  @media (max-height: 800px) {
+    height: 110vh;
   }
 
   @media (max-height: 700px) {
-    height: 140vh;
+    height: 115vh;
   }
 `;

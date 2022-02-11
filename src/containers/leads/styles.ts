@@ -47,6 +47,10 @@ export const Title = styled.span`
   @media (max-width: 472px) {
     font-size: 30px;
   }
+
+  @media (max-height: 800px) {
+    font-size: 45px;
+  }
 `;
 
 export const SubTitleSuccess = styled.span`
@@ -117,7 +121,9 @@ export const Description = styled.span`
 
   @media (max-height: 850px) {
     font-size: 16px;
+    padding: 25px 0px;
   }
+  
 `;
 
 export const DescriptionSuccess = styled.span`
@@ -211,6 +217,11 @@ export const FormInput = styled.input`
     box-shadow: 0px 0px 35px 10px rgba(220,8,255,0.42);
     outline: none; 
   }
+
+  @media (max-height: 800px) {
+    font-size: 12px;
+    height: 38px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -257,6 +268,11 @@ export const RegisterBtn = styled.button`
     color: #fff;
     background-color: #ff18af;
     border-color: #ff18af;
+  }
+
+  @media (max-height: 800px) {
+    font-size: 12px;
+    padding: 10px 15px;
   }
 `;
 

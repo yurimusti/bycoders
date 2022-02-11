@@ -39,6 +39,11 @@ export const SubTitle = styled.span`
     justify-content: center;
     font-size: 30px;
   }
+
+  @media (max-height: 800px) {
+    font-size: 45px;
+    line-height: 40px;
+  }
 `;
 
 export const IntContainer = styled.div`
