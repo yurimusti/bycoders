@@ -44,13 +44,14 @@ export const Title = styled.span`
     font-size: 45px;
   }
 
+  @media (max-height: 800px) {
+    font-size: 45px;
+  }
+
   @media (max-width: 472px) {
     font-size: 30px;
   }
 
-  @media (max-height: 800px) {
-    font-size: 45px;
-  }
 `;
 
 export const SubTitleSuccess = styled.span`
@@ -94,6 +95,12 @@ export const SubTitleSuccess = styled.span`
 
   @media (max-width: 472px) {
     font-size: 24px;
+  }
+
+  @media (max-height: 800px) {
+    font-size: 30px;
+    line-height: 40px;
+    max-width: 440px;
   }
 
 `;
@@ -146,11 +153,17 @@ export const DescriptionSuccess = styled.span`
   }
 
   @media (max-width: 940px) {
-    max-width: 420px;
+    max-width: 400px;
   }
 
   @media (max-width: 831px) {
     max-width: 600px;
+  }
+
+  @media (max-height: 850px) {
+    font-size: 14px;
+    padding: 5px 0px;
+    max-width: 430px;
   }
 `;
 
